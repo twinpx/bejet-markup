@@ -1,0 +1,20 @@
+﻿// start /components/catalog.group.gallery/
+
+link( rel="stylesheet", href="/components/catalog.group.gallery/slideme.css" )
+link( rel="stylesheet", href="/components/catalog.group.gallery/style.css" )
+script( src="/components/catalog.group.gallery/slideme2.js" )
+script( src="/components/catalog.group.gallery/script.js" )
+
+section.b-catalog-group-gallery.b-contrast.b-content
+  .b-container
+    #gallery
+      ul.slideme
+        - var n = 0
+        while n < 9
+          - n++
+          li
+            .b-h1.i-center Готовый интернет-магазин
+            img( src="/upload/gallery/1.jpg" )
+            .b-catalog-group-gallery__text.b-h1.i-center Одежда
+
+// end /components/catalog.group.gallery/

@@ -1,0 +1,123 @@
+fieldset
+  border none
+  background-color $dark-grey
+  padding 40px
+  margin 150px 0 0 0
+  border-radius( 3px )
+  color #fff
+  transition( margin-top 0.7s ease )
+  
+  &.i-move
+    margin-top 0
+  
+  h2
+    text-align center
+    margin-top 0
+    
+  p
+    text-align center
+    font-size 9pt
+    
+  a
+    color #fff
+
+.b-fieldset-content
+  max-width 520px
+  margin-right auto
+  margin-left auto
+  
+button
+  border 0
+  
+  &:focus
+    outline 0
+
+input
+  border 0
+  padding 0
+  margin 0
+  
+  &:focus
+    outline 0
+    
+select
+  background $bg-color
+  border-radius( 3px )
+  border 1px solid #494949
+  padding 10px 15px
+  color $brand-color
+  width 312px
+  
+  &:focus
+    outline 0
+    
+options
+  color $brand-color
+  border 1px solid #494949
+  
+  &:focus
+    outline 0
+    
+.b-form
+  
+  &-field
+    margin-bottom 0
+    rel()
+    
+  &-submit
+    text-align center
+    
+  &-message
+    padding 13px 20px
+    font-size 9pt
+    border-radius( 3px )
+    overflow hidden
+    white-space nowrap
+    text-align center
+    
+    &.i-error
+      background #aa4242
+      color #fff
+      
+    
+.b-input-text
+  background-color $darker-grey
+  border-radius( 2px )
+  box-sizing( border-box )
+  padding 0 45px 0 5%
+  height 60px
+  width 520px
+  display block
+  color #fff
+  display block
+  
+  &[required]
+    background-image embedurl('img/star.png')
+    background-repeat no-repeat
+    background-position right center
+    
+    .i-warning &
+      background-image embedurl('img/star-warning.png')
+      
+  .i-warning &
+    background-color $warning-bg
+    color $warning-color
+    
+  &[name="capcha"]
+    padding-right 212px
+    
+.b-label
+  ib()
+  font-size 10.5pt
+  font-weight bold
+  color #fff
+  padding-left 5%
+  
+  .i-warning &
+    color $warning-color
+    
+.b-capcha-img
+  position absolute
+  top 33px
+  right 10px
+  

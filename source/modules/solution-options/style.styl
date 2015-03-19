@@ -1,0 +1,100 @@
+@import '../../styl/component-include.styl'
+
+.b-solution-options
+
+  ul
+    margin 0
+    padding 0
+    border-top 1px solid $middle-grey
+    
+  .ui-selectmenu-button
+    display block
+  
+.b-so
+  
+  &__i
+    rel()
+    border-bottom 1px solid $middle-grey
+    list-style-type none
+    padding 24px 0 24px 73px
+    color $brand-color
+    after()
+    cursor pointer
+    background embedurl('img/checked.png') no-repeat 10px center;
+    
+    .i-unselective &
+      cursor default
+      background none
+      padding-left 24px
+      color #fff
+    
+    &.i-unchecked
+      color #fff
+      background-image embedurl('img/unchecked.png')
+      
+      select
+        color #fff
+      
+    .b-select
+      margin-top 10px
+      
+  &__checkbox
+    display none
+      
+  &__name
+    float left
+      
+  &__price
+    float right
+    white-space nowrap
+    margin-right 20px
+      
+    &-num
+      font-size 13.5pt
+      margin-right 12px
+      
+  &__summ
+    text-align center
+    font-size 18pt
+    font-weight bold
+    color #fff
+    transition( opacity 0.5s ease )
+    
+    .b-solution-options.i-unchecked &
+      opacity(0)
+    
+    &-num
+      margin-right 12px
+      
+  &__note
+    abs()
+    padding 13px 20px
+    background #aa4242
+    font-size 9pt
+    color #fff
+    border-radius( 3px )
+    width 0
+    overflow hidden
+    white-space nowrap
+    animation( soNote 1.5s ease )
+    -webkit-animation-fill-mode forwards
+    animation-fill-mode forwards
+      
+@keyframes soNote {
+  0% {
+   width 0
+   margin-left 0
+  }
+  25% {
+   width 230px
+   margin-left -135px
+  }
+  60% {
+   opacity(1)
+  }
+  100% {
+   width 230px
+   margin-left -135px
+   opacity(0)
+  }
+}

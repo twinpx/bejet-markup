@@ -1,0 +1,9 @@
+﻿block text
+block href
+
+if submit
+  input( type="submit" value="#{ text }" name="BuyButton" )
+else if href
+  a( href="#{href}" ).b-button.i-scheme-2 #{ text }
+else
+  button( type="submit" ).b-button.i-scheme-2 #{ text }

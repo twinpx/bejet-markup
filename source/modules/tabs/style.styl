@@ -1,0 +1,53 @@
+@import '../../styl/component-include.styl'
+
+.b-tabs
+  
+  &__nav
+    margin 0
+    border-bottom 3px solid $dark-grey
+    position relative
+    
+    @media( max-width: 530px)
+      border-bottom none
+    
+  &__decor
+    position absolute
+    bottom -3px
+    left 0
+    height 3px
+    width 180px
+    background-color $brand-color
+    transition( all 0.3s ease )
+    
+    @media( max-width: 530px)
+      display none
+    
+  &__tab
+    ib()
+    padding 16px 70px
+    margin-right -4px
+    font-size 9pt
+    
+    @media( max-width: 750px)
+      padding-right 40px
+      padding-left 40px
+    
+    @media( max-width: 530px)
+      display block
+      text-align center
+      border-bottom 1px solid $dark-grey
+    
+    &.i-active
+      color: $brand-color
+    
+    a&:hover
+      text-decoration none
+      
+  &__i
+    opacity(0)
+    transition( opacity 1s ease )
+    display none
+    
+    &.i-active
+      opacity(1)
+      display block

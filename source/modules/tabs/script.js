@@ -4,9 +4,21 @@
           $this = $( self ),
           $tabs = $this.find( '.b-tabs__tab' ),
           $items = $this.find( '.b-tabs__i' ),
-          $decor = $this.find( '.b-tabs__decor' );
+          $decor = $this.find( '.b-tabs__decor' ),
+          popFlag = false;
           
       $tabs.click( clickTab );
+      moveDecor( $tabs.eq(0) );
+      locationTab();
+      
+      window.onpopstate = function( event ) {
+        popFlag = true;
+        if ( event.state ) {
+          $tabs.filter( '[data-tab=' + event.state.tab + ']' ).click();
+        } else {
+          $tabs.eq( '0' ).click();
+        }
+      };
       
       function clickTab(e) {
         var $this = $( e.target );
@@ -19,7 +31,22 @@
         highlightTab( $this );
         moveDecor( $this );
         showItem( $this );
+        setUrl( $this );
         
+      }
+      
+      function setUrl( $tab ) {
+        if ( !window.history ) {
+          return;
+        }
+        var tab = $tab.data( 'tab' ),
+            url = "?tab=" + tab;
+        
+        if ( !popFlag ) {
+          window.history.pushState( {tab: tab}, "page 2", url );
+        }
+        
+        popFlag = false;
       }
       
       function showItem( $tab ) {
@@ -43,6 +70,23 @@
       function highlightTab( $tab ) {
         $tabs.removeClass( 'i-active' );
         $tab.addClass( 'i-active' );
+      }
+      
+      function locationTab() {
+        var tab = String( window.location.search ).match( /tab=([-_a-z]+)/ );
+        
+        if ( !tab ) {
+          return;
+        }
+        
+        tab = tab[1];
+        
+        var evt = {
+          target: $tabs.filter( '[data-tab=' + tab + ']' ),
+          preventDefault: function() {}
+        };
+        
+        clickTab( evt );
       }
     });
   };

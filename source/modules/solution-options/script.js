@@ -113,8 +113,8 @@ SolutionOptions.prototype.showDisabledNote = function( $item, e ) {
   $item.find( '.b-so__note' ).remove();
   
   $note.css({
-      top: e.pageY - top - 34 + 'px',
-      left: e.pageX - left + 'px'
+      top: e.pageY - top - 25 + 'px',
+      left: ( $(document).width() - 230 )/2 + 'px'
     });
       
   $item.append( $note );

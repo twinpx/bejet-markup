@@ -12,6 +12,9 @@
   margin-left -350px
   z-index 1000
   transform( scale( 0.8 ) )
+  
+  @media (max-width: 720px)
+    display none
 
   @media (min-width: $media-width1)
     margin-left devide( mult( -1, $content-width1 ), 2 )

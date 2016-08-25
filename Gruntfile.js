@@ -232,7 +232,7 @@ module.exports = function( grunt ) {
       prodTemplate: {
         options: {
           mangle: true,
-          compress: true,
+          compress: {},
           preserveComments: 'some'
         },
         files: [
@@ -244,7 +244,7 @@ module.exports = function( grunt ) {
       prodComponents: {
         options: {
           mangle: true,
-          compress: true
+          compress: {}
         },
         files: [
           {

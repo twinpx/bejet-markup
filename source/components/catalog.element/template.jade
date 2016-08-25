@@ -94,6 +94,58 @@ link( rel="stylesheet", href="/components/catalog.element/style.css" )
                   i
                 td
                   i
+          
+      .b-tabs__i( data-tab="price_table" )
+        h2.w_m Варианты покупки
+        .price_table
+          .column
+            div
+              .cell
+                p Только Маркет
+              .cell
+                | 19 900 
+                sup руб
+              .cell(style='height: 308px;')
+                ul
+                  li Маркет — адаптивный интернет-магазин
+              .cell
+                a.b-button.i-scheme-2(href='/personal/cart/add2backet.php?nabor=1&order[]=59') Купить
+          .column
+            div
+              .cell
+                p Небольшой магазин и хостинг свой
+              .cell
+                | 55 800 
+                sup руб
+              .cell(style='height: 308px;')
+                ul
+                  li Маркет — адаптивный интернет-магазин
+                  li Лицензия «1С-Битрикс: Управление сайтом — Малый бизнес»
+                  li Бесплатная установка
+              .cell
+                a.b-button.i-scheme-2(href='/personal/cart/add2backet.php?nabor=1&order[]=59&order[]=8&order[]=38') Купить
+          .column
+            div
+              .cell
+                p Ваш первый интернет-магазин
+              .cell
+                | 57 650 
+                sup руб
+              .cell(style='height: 308px;')
+                ul
+                  li Маркет — адаптивный интернет-магазин
+                  li Лицензия «1С-Битрикс: Управление сайтом — Малый бизнес»
+                  li Хостинг на 1 месяц — 10 Гб
+                  li Домен .RU
+                  li Бесплатная установка
+              .cell
+                a.b-button.i-scheme-2(href='/personal/cart/add2backet.php?nabor=1&order[]=59&order[]=8&order[]=89&order[]=16&order[]=38') Купить
+            
+      hr.i-size-L
+      
+      h2.w_m Выберите свою комплектацию 
+  
+      include ../../modules/solution-options/lite.jade
     
   hr.i-size-L
     

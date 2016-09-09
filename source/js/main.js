@@ -18,3 +18,6 @@ if ( $demoIframe.length ) {
     $demoIframe.height( $window.height() - $demoIframe.offset().top );
   }).resize();
 }
+
+var container = document.getElementById( 'b-slider' );
+Ps.initialize(container);

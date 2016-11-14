@@ -52,10 +52,6 @@
       margin 0 -20px
       padding-right 20px
       padding-left 20px
-      
-    .i-white &
-      background-color #f2f2f2
-      color #333
     
     &.i-move
       margin-top 0
@@ -67,6 +63,10 @@
     p
       text-align center
       font-size 9pt
+      
+  &.i-white fieldset
+    background-color #f2f2f2
+    color #333
       
   .b-form
     
@@ -103,12 +103,12 @@
     @media ( max-width: $media-width1 )
       width 100%
           
-    .i-warning &
-      color $warning-color
-          
-    .i-white &
-      background-color #fff
-      color #333
+  .i-warning .b-input-text
+    color $warning-color
+        
+  .i-white .b-input-text
+    background-color #fff
+    color #333
       
   .b-label
     ib()
@@ -116,11 +116,11 @@
     font-weight bold
     padding-left 5%
       
-    .i-white &
-      color #333
-    
-    .i-warning &
-      color $warning-color
+  &.i-white .b-label
+    color #333
+  
+  .i-warning .b-label
+    color $warning-color
       
   .i-float
 

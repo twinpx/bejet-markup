@@ -92,6 +92,7 @@ fieldset
       
     
 .b-input-text
+  border none
   border-radius( 2px )
   box-sizing( border-box )
   padding 0 45px 0 5%
@@ -132,3 +133,63 @@ fieldset
     
     .b-label
       transform( translateY( -5px ))
+      
+.b-button,
+a.b-button,
+input[ type="submit" ]
+  color #fff
+  font-size 10.5pt
+  font-weight bold
+  text-transform uppercase
+  text-align center
+  display inline-block
+  vertical-align top
+  padding 0 28px
+  line-height 50px
+  border-radius( 3px )
+  background-color $dark-grey
+  transition( all 0.3s ease )
+  box-sizing( border-box )
+  white-space nowrap
+  
+  &:hover
+    background-color $brand-color
+    text-decoration none
+    color #fff
+    
+  &:active
+    background-color #87af15
+    
+    
+  &.i-scheme-2
+    background-color $brand-color
+  
+    &:hover
+      background-color $button-scheme-2
+      
+    &:active
+      background-color $button-scheme-2-hover
+
+input[ type="submit" ]
+  background-color $brand-color
+
+  &:hover
+    background-color $button-scheme-2
+    
+  &:active
+    background-color $button-scheme-2-hover
+    
+hr
+  border 0
+  height 1px
+  padding 0
+  margin 10px 0
+  
+  &.i-size-XL
+    margin 60px 0
+  
+  &.i-size-L
+    margin 20px 0
+  
+  &.i-size-M
+    margin 15px 0

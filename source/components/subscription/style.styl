@@ -41,4 +41,94 @@
     
     a
       color #333
+      
+fieldset
+  border none
+  padding 40px
+  border-radius( 3px )
+  transition( margin-top 0.7s ease )
+  
+  @media ( max-width: $media-width1 )
+    margin 0 -20px
+    padding-right 20px
+    padding-left 20px
     
+  .i-white &
+    background-color #f2f2f2
+    color #333
+  
+  &.i-move
+    margin-top 0
+    
+  h2
+    text-align center
+    margin-top 0
+    
+  p
+    text-align center
+    font-size 9pt
+    
+.b-form
+  
+  &-field
+    margin-bottom 0
+    rel()
+      
+    .b-asterisk
+      position absolute
+      bottom 5px
+      right 22px
+      font-size 19pt
+  
+    &.i-warning .b-asterisk
+      color $warning-color
+
+  &-submit
+    text-align center
+    
+    &.i-error
+      background #aa4242
+      color #fff
+      
+    
+.b-input-text
+  border-radius( 2px )
+  box-sizing( border-box )
+  padding 0 45px 0 5%
+  height 60px
+  width 520px
+  display block
+  
+  @media ( max-width: $media-width1 )
+    width 100%
+        
+  .i-warning &
+    color $warning-color
+        
+  .i-white &
+    background-color #fff
+    color #333
+    
+.b-label
+  ib()
+  font-size 10.5pt
+  font-weight bold
+  padding-left 5%
+    
+  .i-white &
+    color #333
+  
+  .i-warning &
+    color $warning-color
+    
+.i-float
+
+  .b-label
+    transform( translateY( 45px ))
+    cursor text
+    transition( all 0.3s ease )
+    
+  &.i-focus
+    
+    .b-label
+      transform( translateY( -5px ))

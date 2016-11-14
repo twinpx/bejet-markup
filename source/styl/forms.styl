@@ -150,20 +150,24 @@ options
   right 10px
   
 .b-radio-anim
+  padding-left 40px
   
   label
-    position rel()
+    rel()
+    font-weight normal
     
     &:before
       content ''
       display block
-      border 3px solid $brand-color
+      border 3px solid $darker-grey
+      background-color $darker-grey
       border-radius 51%
       height 24px
       width 24px
       position absolute
       top 0
-      left 0
+      left -40px
+      transition( all 0.5s ease )
     
     &:after
       content ''
@@ -172,17 +176,21 @@ options
       border-radius 51%
       height 24px
       width 24px
-      transform scale(0.5)
+      transform scale(0)
       position absolute
       top 0
-      left 0
+      left -40px
+      transition( all 0.3s ease )
   
-  input[ type="radio" ]:checked + label:before
-    border-width 0
-    background-color $darker-grey
-  
-  input[ type="radio" ]:checked + label:after
-    transform scale(0)
+  input[ type="radio" ]:checked + label
+    color $brand-color
+    
+    &:before
+      border-color $brand-color
+      background-color transparent
+    
+    &:after
+      transform scale(0.5)
     
   input[ type="radio" ]
     display none

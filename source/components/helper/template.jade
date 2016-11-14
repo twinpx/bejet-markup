@@ -27,14 +27,16 @@ hr.i-size-L
       .row
         .col-sm-4
           .b-radio-anim
-            input( type="radio" name="type1" value="0" )
-            label Резместить информацию о компании
+            input#radio1( type="radio" name="type1" value="0" checked )
+            label( for="radio1" ) Разместить информацию о компании
         .col-sm-4
-          input( type="radio" name="type1" value="1" )
-          p Продавать услуги
+          .b-radio-anim
+            input#radio2( type="radio" name="type1" value="1" )
+            label( for="radio2" ) Продавать услуги
         .col-sm-4
-          input( type="radio" name="type1" value="2" )
-          p Продавать товары
+          .b-radio-anim
+            input#radio3( type="radio" name="type1" value="2" )
+            label( for="radio3" ) Продавать товары
           
     .b-helper-fieldset
       .row

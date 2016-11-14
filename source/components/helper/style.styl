@@ -1,0 +1,30 @@
+@import '../../styl/component-include.styl'
+
+.b-helper
+  background-color $dark-grey
+  
+  &-tabs
+    height 70px
+    
+    nav
+      margin 0 95px
+      
+      a
+        float left
+        width 25%
+        line-height 70px
+        height 70px
+        text-align center
+        background-color #202020
+        
+      &:after
+        content ''
+        display table
+        clear both
+        
+  &-body
+    color #fff
+    padding 70px
+  
+  &-fieldset
+    border-top 1px solid #333

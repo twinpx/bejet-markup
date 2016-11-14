@@ -11,6 +11,10 @@ fieldset
     margin 0 -20px
     padding-right 20px
     padding-left 20px
+    
+  .i-white &
+    background-color #f2f2f2
+    color #333
   
   &.i-move
     margin-top 0
@@ -68,7 +72,16 @@ options
   &-field
     margin-bottom 0
     rel()
-    
+      
+    .b-asterisk
+      position absolute
+      bottom 5px
+      right 22px
+      font-size 19pt
+  
+    &.i-warning .b-asterisk
+      color $warning-color
+
   &-submit
     text-align center
     
@@ -96,13 +109,16 @@ options
   color #fff
   display block
   
-  &[required]
+  @media ( max-width: $media-width1 )
+    width 100%
+  
+  /*&[required]
     background-image embedurl('img/star.png')
     background-repeat no-repeat
     background-position right center
     
     .i-warning &
-      background-image embedurl('img/star-warning.png')
+      background-image embedurl('img/star-warning.png')*/
       
   .i-warning &
     background-color $warning-bg
@@ -111,12 +127,19 @@ options
   &[name="capcha"]
     padding-right 212px
     
+  .i-white &
+    background-color #fff
+    color #333
+    
 .b-label
   ib()
   font-size 10.5pt
   font-weight bold
   color #fff
   padding-left 5%
+    
+  .i-white &
+    color #333
   
   .i-warning &
     color $warning-color

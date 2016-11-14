@@ -1,0 +1,44 @@
+@import '../../styl/component-include.styl'
+
+.b-subscription
+  height 365px
+  transition( all 0.5s ease )
+  
+  p,
+  h3
+    text-align center
+  
+  .b-form-field
+  
+    @media ( min-width: $content-width1 )
+      width 520px
+      margin 0 auto
+    
+  form
+    display block
+    
+  .b-message
+    display none
+    
+  &.i-success,
+  &.i-error
+    padding-top 60px
+    transform scale(1)
+    opacity 1
+    
+    form
+      display none
+      
+    .b-message
+      display block
+      
+  &.i-fadeout
+    transform scale(0.5)
+    opacity 0
+    
+  &.i-white
+    color #333
+    
+    a
+      color #333
+    

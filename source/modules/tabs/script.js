@@ -16,7 +16,7 @@
         if ( event.state ) {
           $tabs.filter( '[data-tab=' + event.state.tab + ']' ).click();
         } else {
-          $tabs.eq( '0' ).click();
+          $tabs.eq(0).click();
         }
       };
       

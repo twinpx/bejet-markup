@@ -5,7 +5,7 @@ module.exports = function( grunt ) {
     source: 'source/',
     dest: 'dest/',
     temp: 'temp/',
-    prod: 'Z:/bejet/markup/',
+    prod: /*'Z:/bejet/*/'markup/',
     
     jade: {
       dev: {

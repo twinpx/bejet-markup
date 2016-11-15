@@ -10,15 +10,17 @@ hr.i-size-L
   .b-helper-tabs
     nav
       a( href="" ) Выбор решения
-      a( href="" ) Выбор тематики
-      a( href="" ) Цветовая схема
-      a( href="" ) Модули
+      span.i-active Выбор тематики
+      span Цветовая схема
+      span Модули
       
   .b-helper-body
     
-    h2 Тематика веб-сайта
-    p Ответьте на все вопросы помощника и о пдскажет, какие решения подходят для вас.
-  
+    h2.text-center Тематика веб-сайта
+    p.text-center Ответьте на все вопросы помощника и о пдскажет, какие решения подходят для вас.
+    
+    hr.i-size-M
+    
     .b-helper-fieldset
       .row
         .col-sm-6
@@ -44,24 +46,30 @@ hr.i-size-L
           h3 Версия разделов оформления заказа, версия разделов оформления заказа
       .row
         .col-sm-4
-          input( type="checkbox" name="type2[]" value="0" )
-          p Резместить информацию о компании
+          .b-checkbox-anim
+            input#checkbox1( type="checkbox" name="type2[]" value="0" checked )
+            label( for="checkbox1" ) Продавать товары
         .col-sm-4
-          input( type="checkbox" name="type2[]" value="1" )
-          p Продавать услуги
+          .b-checkbox-anim
+            input#checkbox2( type="checkbox" name="type2[]" value="1" )
+            label( for="checkbox2" ) Разместить информацию о компании
         .col-sm-4
-          input( type="checkbox" name="type2[]" value="2" )
-          p Продавать товары
+          .b-checkbox-anim
+            input#checkbox3( type="checkbox" name="type2[]" value="2" )
+            label( for="checkbox3" ) Продавать услуги
       .row
         .col-sm-4
-          input( type="checkbox" name="type2[]" value="3" )
-          p Резместить информацию о компании
+          .b-checkbox-anim
+            input#checkbox4( type="checkbox" name="type2[]" value="3" )
+            label( for="checkbox4" ) Продавать товары
         .col-sm-4
-          input( type="checkbox" name="type2[]" value="4" )
-          p Продавать услуги
+          .b-checkbox-anim
+            input#checkbox5( type="checkbox" name="type2[]" value="4" )
+            label( for="checkbox5" ) Разместить информацию о компании
         .col-sm-4
-          input( type="checkbox" name="type2[]" value="5" )
-          p Продавать товары
+          .b-checkbox-anim
+            input#checkbox6( type="checkbox" name="type2[]" value="5" )
+            label( for="checkbox6" ) Продавать услуги
           
     .b-helper-fieldset
       .row
@@ -69,17 +77,35 @@ hr.i-size-L
           h3 Версия разделов оформления заказа, версия разделов оформления заказа
       .row
         .col-sm-4
-          input( type="checkbox" name="type2[]" value="0" )
-          img( src="" )
-          p Резместить информацию о компании
+          .b-checkbox-anim
+            input#checkbox7( type="checkbox" name="type3[]" value="0" checked )
+            label( for="checkbox7" )
+              img( src="/template/images/bg.gif" )
+              br
+              | Продавать услуги
         .col-sm-4
-          input( type="checkbox" name="type2[]" value="1" )
-          img( src="" )
-          p Продавать услуги
+          .b-checkbox-anim
+            input#checkbox8( type="checkbox" name="type3[]" value="1" )
+            label( for="checkbox8" )
+              img( src="/template/images/bg.gif" )
+              br
+              | Продавать услуги
         .col-sm-4
-          input( type="checkbox" name="type2[]" value="2" )
-          img( src="" )
-          p Продавать товары
-    
+          .b-checkbox-anim
+            input#checkbox9( type="checkbox" name="type3[]" value="2" )
+            label( for="checkbox9" )
+              img( src="/template/images/bg.gif" )
+              br
+              | Разместить информацию о компании
+              
+    .b-helper-fieldset
+      hr.i-size-M
+      .row
+        .col-sm-6
+          p Вашим критериям соответствуют<br>
+            b 14 решений — посмотрим?
+        .col-sm-6.text-right
+          include ../../modules/button/disabled/further
+      
 
 // end /components/helper/

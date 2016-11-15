@@ -164,7 +164,7 @@ options
       height 24px
       width 24px
       position absolute
-      top 0
+      top -1px
       left -40px
       transition( all 0.5s ease )
     
@@ -177,7 +177,7 @@ options
       width 24px
       transform scale(0)
       position absolute
-      top 0
+      top -1px
       left -40px
       transition( all 0.3s ease )
   
@@ -194,3 +194,47 @@ options
   input[ type="radio" ]
     display none
     
+.b-checkbox-anim
+  padding-left 40px
+  
+  label
+    rel()
+    font-weight normal
+    
+    &:before
+      content ''
+      display block
+      width 20px
+      height 20px
+      background-color $darker-grey
+      position absolute
+      top 1px
+      left -40px
+      transition( all 0.5s ease )
+      border-radius 3px
+    
+    &:after
+      content ''
+      display block
+      border-left 3px solid $darker-grey
+      border-bottom 3px solid transparent
+      border-radius 2px
+      height 9px
+      width 14px
+      transform rotate(-45deg)
+      position absolute
+      top 5px
+      left -37px
+      transition( all 0.2s ease 0.15s )
+  
+  input[ type="checkbox" ]:checked + label
+    color $brand-color
+    
+    &:before
+      background-color $brand-color
+    
+    &:after
+      border-bottom-color $darker-grey
+    
+  input[ type="checkbox" ]
+    display none

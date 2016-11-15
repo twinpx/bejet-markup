@@ -9,13 +9,22 @@
     nav
       margin 0 95px
       
-      a
+      a,
+      span
         float left
         width 25%
         line-height 70px
         height 70px
         text-align center
         background-color #202020
+        font-size 9pt
+        
+        &.i-active
+          background-color $dark-grey
+          color #fff 
+          
+      a
+        color $brand-color       
         
       &:after
         content ''
@@ -24,7 +33,40 @@
         
   &-body
     color #fff
-    padding 70px
+    padding 20px 70px 70px
   
   &-fieldset
-    border-top 1px solid #333
+    border-top 2px solid #333
+    padding-top 24px
+    
+    h3
+      line-height 1.7
+      margin-top 0
+      margin-bottom 4px
+      
+    p
+      font-size 9pt
+      
+      &:first-of-type
+        margin-top 0
+        
+      b
+        font-size 12pt
+        
+    .col-sm-6
+      margin-bottom 18px
+        
+    .col-sm-4
+      margin-bottom 25px
+      
+    label
+      line-height 17px
+      width 100%
+      
+      img
+        width 100%
+        height auto
+        margin-bottom 12px
+        
+    .b-button
+      min-width 194px

@@ -95,5 +95,9 @@
       $float.find( '.b-input-text' ).focus();
     }
   });
+  
+  if ( Cookies.get( 'NEWS_SUBSCRIBED' )) {
+    $( '.b-subscription' ).addClass( 'i-success' );
+  }
 
 }( jQuery ));

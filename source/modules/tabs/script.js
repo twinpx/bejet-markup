@@ -56,6 +56,9 @@
           if ( $item.data( 'tab' ) === tab ) {
             $items.removeClass( 'i-active' );
             $item.addClass( 'i-active' );
+            if ( $item.find( '.fotorama' ).length ) {
+              $item.find( '.fotorama' ).data('fotorama').resize({ width: "100%" });
+            }
           }
         });
       }

@@ -11,7 +11,12 @@ link( rel="stylesheet", href="/components/catalog.element/style.css" )
     
       hr.i-size-L
         
-      .b-tabs__i.i-active( data-tab="review" )
+      .b-tabs__i.i-active( data-tab="advantages" )
+        
+        include advantages
+      
+      
+      .b-tabs__i( data-tab="review" )
         
         include ../../components/gallery/template.jade
         
@@ -141,11 +146,11 @@ link( rel="stylesheet", href="/components/catalog.element/style.css" )
               .cell
                 a.b-button.i-scheme-2(href='/personal/cart/add2backet.php?nabor=1&order[]=59&order[]=8&order[]=89&order[]=16&order[]=38') Купить
             
-      hr.i-size-L
+      //-hr.i-size-L
       
-      h2.w_m Выберите свою комплектацию 
+      //-h2.w_m Выберите свою комплектацию 
   
-      include ../../modules/solution-options/lite.jade
+      //-include ../../modules/solution-options/lite.jade
     
   hr.i-size-L
     

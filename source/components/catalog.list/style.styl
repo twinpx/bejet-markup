@@ -80,11 +80,14 @@
     left 0
     width 100%
     transition( top 0.5s ease )
-  
-  &__sh-price
-    display block
     font-size 22pt
     font-weight bold
+    
+  &__sh-old
+    text-decoration line-through
+    font-weight normal
+    display block
+    font-size 14pt
   
   &__sh-text
     display block
@@ -117,7 +120,7 @@
     padding 0 20px
   
   &__i:hover &__sh-price
-    top 49%
+    top 43%
   
   &__i:hover &__sh-button
     top 70%
@@ -165,6 +168,33 @@
         
     @media ( max-width: 1300px ) and ( min-width: 801px )
       width: 50%;
+    
+    &.i-sale
+      
+      &:before
+        display block
+        content '%'
+        position absolute
+        top 40px
+        right 40px
+        background-color $brand-color
+        border-radius 51%
+        width 64px
+        height 64px
+        text-align center
+        line-height 64px
+        font-size 11pt
+        color $middle-grey
+        font-size 27pt
+        opacity 1
+        transition( opacity 0.5s ease )
+        
+      &:hover:before
+        opacity 0
+        
+        
+      .b-list__sh-num
+        color $brand-color
   
   &.i-empty
     padding-top: 33.3%;

@@ -4,18 +4,18 @@ link( rel="stylesheet", href="/components/catalog.element/style.css" )
 
 .b-catalog-element
 
-  .b-container
-    .b-tabs
+  .b-tabs
+    .b-container
     
       include ../../modules/tabs/include.jade
     
       hr.i-size-L
         
-      .b-tabs__i.i-active( data-tab="advantages" )
+    .b-tabs__i.i-active( data-tab="advantages" )
         
-        include advantages
+      include advantages
       
-      
+    .b-container
       .b-tabs__i( data-tab="review" )
         
         include ../../components/gallery/template.jade

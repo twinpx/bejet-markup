@@ -6,9 +6,12 @@
     background-color #242424
     margin-bottom 1px
     min-height 80px
+    position relative
     
   &-question
-    a
+    position relative
+    
+    a:not(.b-button)
       display block
       position relative
       padding 26px 110px 30px 30px
@@ -69,3 +72,97 @@
       a
         display inline-block
         margin 23px 0 26px
+        
+  &.i-bitrix
+  
+    .b-faq
+    
+      &-item
+        margin-bottom 40px
+        border 1px solid #444
+        background-color transparent
+        min-height 78px
+        
+        a:not(.b-button)
+        
+          @media( max-width 540px )
+            text-align center
+            padding-right 30px
+        
+          &:after
+            display none
+            
+        &.i-sale
+          border-color $brand-color
+          
+          &:before
+            display block
+            content '%'
+            position absolute
+            top -14px
+            right -14px
+            background-color $brand-color
+            border-radius 51%
+            width 29px
+            height 29px
+            text-align center
+            line-height 29px
+            font-size 11pt
+            color $middle-grey
+            
+          .b-price:not( .i-old )
+            color $brand-color
+            
+    .b-faq-info
+      position absolute
+      top 15px
+      right 234px
+      pointer-events none
+      
+      @media( max-width $content-width2 )
+        position static
+        display block
+        padding 0 0 10px 30px
+        margin-top -10px
+        
+      @media( max-width 540px )
+        text-align center
+        padding-left 0
+        
+    
+    .b-button
+      position absolute
+      top 15px
+      right 15px
+      min-width 196px
+      
+      @media( max-width 540px )
+        position static
+        margin 0 auto 30px
+        display block
+        width 196px
+      
+    .b-price
+      display inline-block
+      font-size 14pt
+      font-weight bold
+      line-height 50px
+      
+      sup
+        font-size 9.5pt
+        font-weight normal
+        margin-left 5px
+        line-height 52px
+      
+      &.i-old
+        text-decoration line-through
+        font-size 10.5pt
+        font-weight normal
+        margin-right 25px
+        
+        sup
+          font-size 7pt
+          line-height 50px
+          
+    .b-faq-answer__text
+      border-color #444

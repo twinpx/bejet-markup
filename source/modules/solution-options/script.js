@@ -12,6 +12,7 @@ $.widget( "custom.selectmenuPrice", $.ui.selectmenu, {
    
     this._setText( li, item.label );
     li.attr( 'data-price', $( item.element ).data( 'price' ));
+    li.attr( 'data-old-price', $( item.element ).data( 'old-price' ));
     
     return li.appendTo( ul );
   }
@@ -24,7 +25,14 @@ $( '.b-so__select' ).each( function() {
     appendTo: $this.closest( '.b-so__select-container' ),
     select: function( event, ui ) {
       var value = ui.item.element.data( 'price' );
-      $this.closest( '.b-so__i' ).find( '.b-so__price-num' ).text( value );
+      $this.closest( '.b-so__i' ).find( '.b-so__price:not(.i-old) .b-so__price-num' ).text( value );
+      
+      var oldPrice = ui.item.element.data( 'old-price' ) || '';
+      if ( oldPrice ) {
+        $this.closest( '.b-so__i' ).find( '.b-so__price.i-old ').removeClass( 'i-hide' ).find( '.b-so__price-num' ).text( oldPrice );
+      } else {
+        $this.closest( '.b-so__i' ).find( '.b-so__price.i-old ').addClass( 'i-hide' )
+      }
       $this.closest( '.b-solution-options' ).data( 'SolutionOptions' ).calculate();
     }
   });
@@ -99,7 +107,9 @@ function SolutionOptions( el ) {
   
   this.$el.find( 'select' ).change( function() {
     var value = $( this ).find( 'option:selected' ).data( 'price' );
-    $( this ).closest( '.b-so__i' ).find( '.b-so__price-num' ).text( value );
+    $( this ).closest( '.b-so__i' ).find( '.b-so__price:not(.i-old) .b-so__price-num' ).text( value );
+    var oldPrice = $( this ).find( 'option:selected' ).data( 'old-price' ) || '';
+    $( this ).closest( '.b-so__i' ).find( '.b-so__price.i-old .b-so__price-num' ).text( oldPrice );
     self.calculate();
   });
 }
@@ -122,7 +132,7 @@ SolutionOptions.prototype.showDisabledNote = function( $item, e ) {
 
 SolutionOptions.prototype.calculate = function() {
   var summ = 0;
-  this.$el.find( '.b-so__i:not( .i-unchecked ) .b-so__price-num' ).each( function() {
+  this.$el.find( '.b-so__i:not( .i-unchecked ) .b-so__price:not(.i-old) .b-so__price-num' ).each( function() {
     summ += Number( $( this ).text().split( ' ' ).join( '' ));
   });
   

@@ -20,4 +20,6 @@ if ( $demoIframe.length ) {
 }
 
 var container = document.getElementById( 'b-slider' );
-Ps.initialize(container);
+if ( window.Ps && container ) {
+  Ps.initialize(container);
+}

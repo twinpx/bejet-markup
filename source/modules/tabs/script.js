@@ -94,4 +94,4 @@
     });
   };
   
-  $( '.b-tabs' ).tabs();
+  $( '.b-tabs:not(.i-links)' ).tabs();

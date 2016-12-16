@@ -95,3 +95,13 @@
   };
   
   $( '.b-tabs:not(.i-links)' ).tabs();
+  
+  $( '.b-tabs.i-links' ).each( function() {
+    var $this = $( this );
+    var $decor = $this.find( '.b-tabs__decor' );
+    var $tab = $this.find( '.b-tabs__tab.i-active' );
+    $decor.css({
+      left: $tab.position().left + 'px',
+      width: $tab.outerWidth()
+    });
+  });

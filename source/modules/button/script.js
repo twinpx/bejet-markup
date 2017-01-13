@@ -1,4 +1,4 @@
-$( '.b-button[href^=#popup]' ).click( function(e) {
+$( '.b-button[href^="#popup"]' ).click( function(e) {
   e.preventDefault();
   
   var $this = $( this ),

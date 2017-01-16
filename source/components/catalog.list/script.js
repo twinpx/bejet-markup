@@ -14,7 +14,7 @@
     //Show images only when they are loaded
     showImages();
     
-    $(".b-catalog-list img").lazyload();
+    $(".b-list img").lazyload();
     
   });
   

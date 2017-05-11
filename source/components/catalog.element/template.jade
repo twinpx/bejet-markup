@@ -11,14 +11,14 @@ link( rel="stylesheet", href="/components/catalog.element/style.css" )
     
       hr.i-size-L
         
-    .b-tabs__i.i-active( data-tab="advantages" )
+    .b-tabs__i( data-tab="advantages" )
         
       include advantages
       
     .b-container
-      .b-tabs__i( data-tab="review" )
-        
-        include ../../components/gallery/template.jade
+      .b-tabs__i.i-active( data-tab="review" )
+      
+        include ../../modules/video-container/include.jade
         
         hr
         

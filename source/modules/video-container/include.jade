@@ -1,0 +1,28 @@
+﻿.b-video-container
+
+  .b-video-container__menu
+  
+    .b-video-container__menu-item.i-active( data-tab="video" )
+      .b-video-container__menu-icon.i-video
+        svg(id='Слой_1', data-name='Слой 1', xmlns='http://www.w3.org/2000/svg', viewbox='0 0 181.42 181.42')
+          title play
+          path.cls-1(d='M91,4.19A86.57,86.57,0,1,1,4.45,90.76,86.67,86.67,0,0,1,91,4.19m0-4a90.57,90.57,0,1,0,90.57,90.57A90.57,90.57,0,0,0,91,.19Z')
+          path.cls-1(d='M72.75,55.44,124,90.76l-51.2,35.32V55.44m-4-7.62V133.7L131,90.76,68.75,47.82Z')
+
+      .b-video-container__menu-text.hidden-xs Видео
+      
+    .b-video-container__menu-item( data-tab="gallery" )
+      .b-video-container__menu-icon.i-gallery
+        svg(id='Слой_2', data-name='Слой 2', xmlns='http://www.w3.org/2000/svg', viewbox='0 0 181.42 181.42')
+          title gallery
+          path.cls-1(d='M177.42,19.34v143H4v-143H177.42m4-4H0v151H181.42v-151Z')
+          polyline.cls-2(points='2.83 129.67 44.42 88.08 68.48 112.15 121.73 58.9 179.33 116.5')
+          circle.cls-2(cx='45.08', cy='49.92', r='12.08')
+          
+      .b-video-container__menu-text.hidden-xs Галерея
+      
+  .b-video-container__tab.i-active( data-tab="video" )
+    iframe(width='719', height='400', src='https://www.youtube.com/embed/h0tim0_WzXY', allowfullscreen='')
+  
+  .b-video-container__tab.hidden( data-tab="gallery" )
+    include ../../components/gallery/template.jade

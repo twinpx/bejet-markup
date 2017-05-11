@@ -169,11 +169,14 @@
     background: url(/template/images/preloader-25.gif) no-repeat 55px 55px $dark-grey;
     overflow: hidden;
     z-index: 8;
+    transition( all 1s ease )
     
     &:hover,
     &:active,
     &:focus
       color: #fff;
+      transform scale( 1.2 )
+      z-index 10
     
     &:nth-child( even )
       background-color: $darker-grey;

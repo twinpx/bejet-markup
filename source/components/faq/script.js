@@ -26,6 +26,10 @@
             $(this).html($(this).attr('data-close-text'));
         }
     });
+    
+    $( '.b-faq-answer__text a' ).click( function(e) {
+      window.location = $( this ).attr( 'href' );
+    });
   });
 
 }( jQuery ));

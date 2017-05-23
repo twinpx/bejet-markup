@@ -9,7 +9,6 @@
     nav
       margin 0 95px
       
-      a,
       span
         float left
         width 25%
@@ -18,6 +17,7 @@
         text-align center
         background-color #202020
         font-size 9pt
+        cursor pointer
         
         &.i-active
           background-color $dark-grey
@@ -70,3 +70,18 @@
         
     .b-button
       min-width 194px
+      
+.b-helper-tab
+  display none
+  
+  &.i-active
+    display block
+    
+button.b-button
+  display none
+  
+  .i-submit &
+    display inline-block
+    
+.i-submit a.b-button
+  display none

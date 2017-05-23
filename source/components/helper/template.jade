@@ -9,103 +9,37 @@ hr.i-size-L
 .b-helper
   .b-helper-tabs
     nav
-      a( href="" ) Выбор решения
-      span.i-active Выбор тематики
-      span Цветовая схема
-      span Модули
+      span.i-active( data-tab="choice" ) Выбор решения
+      span( data-tab="themes" ) Выбор тематики
+      span( data-tab="colors" ) Цветовая схема
+      span( data-tab="modules" ) Модули
       
-  .b-helper-body
+  .b-helper-body( data-action="/components/helper/ajax.json" data-method="GET" )
+  
+    form( action="" method="GET" )
+  
+      .b-helper-tab.i-active( data-tab="choice" )
+        include choice-tab
     
-    h2.text-center Тематика веб-сайта
-    p.text-center Ответьте на все вопросы помощника и о пдскажет, какие решения подходят для вас.
+      .b-helper-tab( data-tab="themes" )
+        include themes-tab
     
-    hr.i-size-M
+      .b-helper-tab( data-tab="colors" )
+        include colors-tab
     
-    .b-helper-fieldset
-      .row
-        .col-sm-6
-          h3 Для чего вам нужен сайт?
-          p Версия разделов оформления заказа
-      .row
-        .col-sm-4
-          .b-radio-anim
-            input#radio1( type="radio" name="type1" value="0" checked )
-            label( for="radio1" ) Разместить информацию о компании
-        .col-sm-4
-          .b-radio-anim
-            input#radio2( type="radio" name="type1" value="1" )
-            label( for="radio2" ) Продавать услуги
-        .col-sm-4
-          .b-radio-anim
-            input#radio3( type="radio" name="type1" value="2" )
-            label( for="radio3" ) Продавать товары
-          
-    .b-helper-fieldset
-      .row
-        .col-sm-6
-          h3 Версия разделов оформления заказа, версия разделов оформления заказа
-      .row
-        .col-sm-4
-          .b-checkbox-anim
-            input#checkbox1( type="checkbox" name="type2[]" value="0" checked )
-            label( for="checkbox1" ) Продавать товары
-        .col-sm-4
-          .b-checkbox-anim
-            input#checkbox2( type="checkbox" name="type2[]" value="1" )
-            label( for="checkbox2" ) Разместить информацию о компании
-        .col-sm-4
-          .b-checkbox-anim
-            input#checkbox3( type="checkbox" name="type2[]" value="2" )
-            label( for="checkbox3" ) Продавать услуги
-      .row
-        .col-sm-4
-          .b-checkbox-anim
-            input#checkbox4( type="checkbox" name="type2[]" value="3" )
-            label( for="checkbox4" ) Продавать товары
-        .col-sm-4
-          .b-checkbox-anim
-            input#checkbox5( type="checkbox" name="type2[]" value="4" )
-            label( for="checkbox5" ) Разместить информацию о компании
-        .col-sm-4
-          .b-checkbox-anim
-            input#checkbox6( type="checkbox" name="type2[]" value="5" )
-            label( for="checkbox6" ) Продавать услуги
-          
-    .b-helper-fieldset
-      .row
-        .col-sm-6
-          h3 Версия разделов оформления заказа, версия разделов оформления заказа
-      .row
-        .col-sm-4
-          .b-checkbox-anim
-            input#checkbox7( type="checkbox" name="type3[]" value="0" checked )
-            label( for="checkbox7" )
-              img( src="/template/images/bg.gif" )
-              br
-              | Продавать услуги
-        .col-sm-4
-          .b-checkbox-anim
-            input#checkbox8( type="checkbox" name="type3[]" value="1" )
-            label( for="checkbox8" )
-              img( src="/template/images/bg.gif" )
-              br
-              | Продавать услуги
-        .col-sm-4
-          .b-checkbox-anim
-            input#checkbox9( type="checkbox" name="type3[]" value="2" )
-            label( for="checkbox9" )
-              img( src="/template/images/bg.gif" )
-              br
-              | Разместить информацию о компании
-              
-    .b-helper-fieldset
-      hr.i-size-M
-      .row
-        .col-sm-6
-          p Вашим критериям соответствуют<br>
-            b 14 решений — посмотрим?
-        .col-sm-6.text-right
-          include ../../modules/button/disabled/further
+      .b-helper-tab( data-tab="modules" )
+        include modules-tab
       
+                
+      .b-helper-fieldset
+        hr.i-size-M
+        .row
+          .col-sm-6
+            p Вашим критериям соответствуют<br>
+              b <span id="helperCount">14</span> <span id="helperCountUnit">решений</span> — <a href="http://www.site.com" id="helperLink">посмотрим</a>?
+          .col-sm-6.text-right
+            include ../../modules/button/disabled/further
+            include ../../modules/button/save
+        
 
 // end /components/helper/

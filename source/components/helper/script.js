@@ -28,7 +28,7 @@
       }
     });
     
-    $( '.b-helper' ).delegate( '.b-radio-anim, .b-checkbox-anim', 'click', function(e) {
+    $( '.b-helper' ).delegate( 'input:checkbox, input:radio', 'click', function(e) {
     
       $.ajax({
         url: ajaxUrl,
@@ -36,7 +36,6 @@
         dataType: "json",
         data: $form.serialize(),
         success: function( data ) {
-          console.log( data.STATUS );
           $( '#helperCount' ).text( data.COUNT );
           $( '#helperCountUnit' ).text( unit( data.COUNT ));
           $( '#helperLink' ).attr({ href: linkHref + '?' + $form.serialize() });

@@ -22,12 +22,16 @@
     .cls-1
       fill #999
     
-    .cls-2
+    .cls-2,
+    .cls-3
       fill none
       stroke #999
       stroke-linecap round
       stroke-miterlimit 10
-      stroke-width 4px
+      stroke-width 5px
+      
+    .cls-2
+      fill-rule evenodd
     
     &-item
       display inline-block
@@ -50,7 +54,8 @@
         .cls-1
           fill $brand-color
         
-        .cls-2
+        .cls-2,
+        .cls-3
           stroke $brand-color
       
     &-icon
@@ -75,7 +80,7 @@
       display block
       
   iframe
-    margin 0 auto
+    margin 0 auto 40px
     max-width 100%
     border 0
     

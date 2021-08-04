@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html class="i-sticky-footer">
   <head>
-    <title>Bejet</title>
+    <title>Confirmation | Bejet</title>
     <meta charset="utf-8">
     <meta name="keywords" content="">
     <meta name="description" content="">
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/template/jquery-ui.min.css">
     <link rel="stylesheet" href="/template/perfect-scrollbar/perfect-scrollbar.min.css">
     <link rel="stylesheet" href="/template/template_styles.css">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=latin,cyrillic" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin,cyrillic" rel="stylesheet">
     <script src="/template/jquery.js"></script>
     <script src="/template/jquery-ui.min.js"></script>
     <script src="/template/perfect-scrollbar/perfect-scrollbar.min.js"></script>
@@ -67,41 +67,45 @@
       </div>
     </header>
     <div class="b-container">
-      <h2>Страницы</h2>
-      <ul>
-        <li><a href="/pages/main/">Главная</a></li>
-        <li><a href="/pages/basket/">Корзина</a></li>
-        <li><a href="/pages/basket/confirmation/">Подтверждение заказа</a></li>
-      </ul>
-    </div>
-    <footer class="b-footer">
-      <div class="b-container">
-        <div class="b-row">
-          <div class="b-col-sm-4">
-            <h4>Решения</h4>
-            <menu>
-              <li><a href="">Готовый интернет-магазин модной одежды Seller</a></li>
-              <li><a href="">Готовый сайт юридиеского бюро</a></li>
-              <li><a href="">Готовый сайт сервисной компании</a></li>
-            </menu>
+      <hr class="i-size-L">
+      <!-- start /components/catalog.basket/-->
+      <link rel="stylesheet" href="/components/catalog.basket.confirmation/style.css">
+      <script src="/components/catalog.basket.confirmation/script.js"></script>
+      <div class="b-catalog-basket-confirmation i-layer">
+        <h1>Заказ сформирован</h1>
+        <div class="row">
+          <div class="col-lg-5 col-md-5">
+            <div class="b-catalog-basket-confirmation__payment">
+              <div>
+                <div class="h6">К оплате</div><b>4 459 руб.</b>
+              </div>
+              <div>
+                <div class="h6">Тип оплаты</div><b>Банковская карта</b>
+              </div>
+            </div>
+            <p>Оплата банковской картой, Apple Pay, Android Pay или еще какая-нибудь.</p>
+            <button type="submit" class="b-button i-scheme-2">Оплатить</button>
           </div>
-          <div class="b-col-sm-4">
-            <h4>Контакты</h4>
-            <menu>
-              <li><a href="">Написать в поддержку</a></li>
-              <li><a href="">Партнерам</a></li>
-            </menu>
-          </div>
-          <div class="b-col-sm-4">
-            <h4>О проекте</h4>
-            <menu>
-              <li><a href="">Что такое Bejet</a></li>
-              <li><a href="">Зачем</a></li>
-              <li><a href="">Как купить</a></li>
-            </menu>
+          <hr class="hidden visible-sm-block visible-xs-block i-size-M">
+          <div class="col-lg-5 col-lg-offset-2 col-md-6 col-md-offset-1">
+            <div class="b-catalog-basket-confirmation__info">
+              <div>
+                <div class="h6">Номер заказа</div><b>141</b>
+              </div>
+              <div>
+                <div class="h6">Дата заказа</div><b>12.01.1987</b><i>13:09</i>
+              </div>
+              <div>
+                <div class="h6">Номер оплаты</div><b>127/1</b>
+              </div>
+            </div>
+            <p>Вы можете следить за выполнением своего заказа в <a href="">Персональном&nbsp;разделе&nbsp;сайта</a>.</p><a href="" class="b-button">Личный кабинет</a>
           </div>
         </div>
       </div>
+      <hr class="i-size-L">
+    </div>
+    <footer class="b-footer">
       <div class="b-footer__copyright">
         <div class="b-container">
           <div class="b-row">
